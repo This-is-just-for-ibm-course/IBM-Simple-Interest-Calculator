@@ -8,7 +8,7 @@ const compute = (e) => {
     document.getElementById('result').innerHTML = y * i * r;
 
 }
-const button = document.getElementById('button');
+const button = document.getElementById('button1');
 button.addEventListener('click', compute);
 const range = document.getElementById('rate');
 const interestRateDisplay = document.getElementsByClassName('interest-rate-display')[0];
