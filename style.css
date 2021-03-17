@@ -1,4 +1,46 @@
-body {background-color:tan;}
-h1{color:green;}
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+form{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: auto;
+    width: 80%;
+}
+h1{
+    color: silver;
+}
+label{
 
+    display: inline-block;
+}
+#rate::-webkit-slider-thumb, #rate::-moz-range-thumb{
+    background-color: blue;
+}
+.spacing{
+    margin-bottom:15px !important;
+}
 
+.rate-slider-container{
+    display: flex;
+    justify-content: center;
+    float: right;
+
+}
+input{
+    margin: 0;
+    float: right;
+    
+}
+.form-centering{
+    margin: auto;
+    max-width: 300px;
+}
+.killMe, .principal{
+    float: right;
+}
+.interest-rate-display{
+    width: 30px;
+}
