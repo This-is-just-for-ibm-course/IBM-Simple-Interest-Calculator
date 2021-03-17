@@ -8,7 +8,7 @@ const compute = (e) => {
         alert('amount must be positive');
         return;
     }
-
+//Something is broken
     document.getElementById('results').innerHTML =
         `<p>If you deposit <span class = 'yellow'>${p.value}</span></p>
            <p>at an interest rate of <span class = 'yellow'>${i.value}%</span></p>
