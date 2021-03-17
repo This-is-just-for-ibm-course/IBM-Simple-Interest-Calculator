@@ -4,7 +4,14 @@ const i = document.getElementById('rate')
 const y = document.getElementById('years')
 const compute = (e) => {
     e.preventDefault();
-
+    if (p.value < 1 || y.value < 0) {
+        alert('amount must be positive');
+        return;
+    }
+    if (typeof y.value !== 'number') {
+        alert('must type in a year')
+        return;
+    }
     document.getElementById('results').innerHTML =
         `<p>If you deposit <span class = 'yellow'>${p.value}</span></p>
            <p>at an interest rate of <span class = 'yellow'>${i.value}%</span></p>
@@ -16,7 +23,7 @@ const button = document.getElementById('button1');
 button.addEventListener('click', compute);
 const range = document.getElementById('rate');
 const interestRateDisplay = document.getElementsByClassName('interest-rate-display')[0];
-interestRateDisplay.innerHTML = 50;
+interestRateDisplay.innerHTML = 10;
 range.addEventListener('input', () => interestRateDisplay.innerHTML = i.value);
 
 
