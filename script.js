@@ -8,10 +8,7 @@ const compute = (e) => {
         alert('amount must be positive');
         return;
     }
-    if (typeof y.value !== 'number') {
-        alert('must type in a year')
-        return;
-    }
+
     document.getElementById('results').innerHTML =
         `<p>If you deposit <span class = 'yellow'>${p.value}</span></p>
            <p>at an interest rate of <span class = 'yellow'>${i.value}%</span></p>
