@@ -1,20 +1,22 @@
 let a = 1;
-
+const p = document.getElementById("principal")
+const i = document.getElementById('rate')
+const y = document.getElementById('years')
 const compute = (e) => {
     e.preventDefault();
-    const p = document.getElementById("principal").value;
-    const i = document.getElementById('rate').value / 100;
-    const y = document.getElementById('years').value;
-    const r = document.getElementById('result').innerHTML = y * i * p;
+
+    document.getElementById('results').innerHTML =
+        `<p>If you deposit <span class = 'yellow'>${p.value}</span></p>
+           <p>at an interest rate of <span class = 'yellow'>${i.value}%</span></p>
+           <p>You will receive an amount of <span class = 'yellow'>${p.value * i.value / 100 * y.value}</span></p>
+           <p>In the year <span class = 'yellow'>${2021 + parseInt(y.value, 10)}</span></p>`;
 
 }
 const button = document.getElementById('button1');
 button.addEventListener('click', compute);
 const range = document.getElementById('rate');
 const interestRateDisplay = document.getElementsByClassName('interest-rate-display')[0];
-range.addEventListener('input', () => interestRateDisplay.innerHTML = range.value);
+interestRateDisplay.innerHTML = 50;
+range.addEventListener('input', () => interestRateDisplay.innerHTML = i.value);
 
 
-const milk = document.getElementById('milk');
-const silk = document.getElementById('silk');
-milk.addEventListener('change', (e) => silk.value = e.target.value);
