@@ -1,4 +1,4 @@
-let a = 1;
+let a = 1.1;
 const p = document.getElementById("principal")
 const i = document.getElementById('rate')
 const y = document.getElementById('years')
